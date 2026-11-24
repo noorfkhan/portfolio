@@ -66,7 +66,7 @@
   .menu ol { list-style: none; padding-left: 18px; }
   @media (min-width: 1200px) { .menu ol { padding-left: 28px; } }
   .menu li a { display: flex; gap: 14px; align-items: baseline; font-family: var(--light); font-size: clamp(28px, 4vw, 40px); line-height: 1.4; letter-spacing: -0.04em; transition: transform .3s ease; }
-  .menu li a em { font-style: normal; color: var(--faint); }
+  .menu li a em { font-style: normal; color: var(--faint); display: inline-block; width: 1.25em; flex: none; } /* fixed width so every word lines up */
   .menu-info { display: grid; gap: 22px; align-content: start; padding-top: 6px; }
   .menu-info small { display: block; font-size: 13px; color: var(--muted); margin-bottom: 4px; }
   .menu-info p, .menu-info a { font-size: 15px; font-family: var(--roman); }
@@ -123,7 +123,7 @@
 
   /* spinning ring badge (stands in for the reference's 3D badge) */
   /* corner badge: nk morphs into the cursive nk as you scroll */
-  .badge { position: relative; width: 120px; height: 48px; }
+  .badge { position: relative; width: 64px; height: 64px; }
   .badge svg, .badge img { display: block; width: 100%; height: 100%; }
 
   /* ---------- footer ---------- */
@@ -487,3 +487,12 @@ html.lenis, html.lenis body { height: auto; }
 
 /* projects page: everything lowercase */
 .proj-list { text-transform: lowercase; }
+
+/* corner badge: gentle floating bounce */
+.badge svg { animation: badge-bob 2.8s ease-in-out infinite; transform-origin: 50% 60%; }
+@keyframes badge-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  45%      { transform: translateY(-5px) rotate(-3deg) scale(1.02, .98); }
+  55%      { transform: translateY(-5px) rotate(-3deg) scale(.99, 1.01); }
+}
+@media (prefers-reduced-motion: reduce) { .badge svg { animation: none; } }
