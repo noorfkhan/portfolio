@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coming soon · Noor Khan</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Fallback for any glyphs the Neue Haas Grotesk trial files don't include -->
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500&family=Inter:wght@500&display=swap" rel="stylesheet">
+<script>
+  // set the theme before the page paints (saved choice, else the device setting)
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<link rel="preload" href="logos/noorkhan-logo.svg?v=30" as="image" fetchpriority="high">
+<link rel="stylesheet" href="styles.css?v=63">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <nav class="nav-left" aria-label="Primary">
+      <a href="about.html">about</a>
+      <a href="work.html">work</a>
+      <a href="https://example.com/resume.pdf" target="_blank" rel="noopener"><!-- TODO: real resume link -->resume</a>
+    </nav>
+    <a href="index.html" class="logo" aria-label="Noor Khan home"><img src="logos/noorkhan-logo.svg?v=30" alt="" width="173" height="26" fetchpriority="high" decoding="sync"></a>
+    <div class="nav-right">
+      <button class="icon-btn search-btn" aria-label="Search" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+      </button>
+      <button class="icon-btn theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+      </button>
+      <button class="burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="search" role="dialog" aria-modal="true" aria-label="Search the site" hidden>
+  <div class="search-panel">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+      <input type="search" placeholder="search projects, values..." autocomplete="off" aria-label="Search">
+      <button class="search-close" aria-label="Close search">esc</button>
+    </div>
+    <ul class="search-results" role="listbox" data-lenis-prevent></ul>
+  </div>
+</div>
+
+<div class="menu" aria-hidden="true">
+  <div class="wrap menu-inner">
+    <ol>
+      <li><a href="index.html"><em>01</em>home</a></li>
+      <li><a href="about.html"><em>02</em>about</a></li>
+      <li><a href="work.html"><em>03</em>work</a></li>
+      <li><a href="values.html"><em>04</em>values</a></li>
+      <li><a href="projects.html"><em>05</em>projects</a></li>
+    </ol>
+    <div class="menu-info">
+      <div><small>location</small><p>palo alto</p></div>
+      <div><small>email</small><a href="mailto:noorfahadkhann@gmail.com">noorfahadkhann@gmail.com</a></div>
+      <div><small>social</small><div class="row"><a href="https://www.linkedin.com/in/noorfahadkhan/" target="_blank" rel="noopener">linkedin</a></div></div>
+    </div>
+  </div>
+</div>
+
+<main class="soon-page">
+  <section class="soon-box fade">
+    <h1>coming soon</h1>
+    <p>this piece isn't online yet. check back soon.</p>
+    <a class="btn solid" href="work.html">⇐ back to work</a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="wordmark" aria-label="noor khan"><span>n</span><span>o</span><span>o</span><span>r</span><span>&nbsp;</span><span>k</span><span>h</span><span>a</span><span>n</span></p>
+    <p class="tag">voicing the unvoiced through politics, media, and design</p>
+    <a class="big" href="mailto:noorfahadkhann@gmail.com">NOORFAHADKHANN@GMAIL.COM</a>
+    <div class="cols">
+      <div><small>social</small><a href="https://www.linkedin.com/in/noorfahadkhan/" target="_blank" rel="noopener">linkedin</a></div>
+      <div><small>sections</small><a href="about.html">about me</a><a href="work.html">my work</a><a href="projects.html">projects</a><a href="values.html">core values</a><a href="mailto:noorfahadkhann@gmail.com" class="hl">contact me</a></div>
+    </div>
+    <p class="copy">© 2026 NOOR KHAN<span>|</span>PALO ALTO</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="site.js?v=52"></script>
+</body>
+</html>
